@@ -5,7 +5,7 @@
   align-items: center;
   font-size: larger;
   padding: 6rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   
 }
 
@@ -148,7 +148,7 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-  .content {
+  /* .content {
     padding: 4rem;
   }
 
@@ -220,7 +220,32 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  } */
+ 
+ 
+  .heading p{
+    font-size: 1.5rem;
   }
+  .HomeImg{
+    /* border: 5px solid blue; */
+    height: 200px;
+    width: 300px;
+  }
+  .description{
+    font-size: 0.6rem;
+  }
+  
+  .mainNav ul{
+    /* border: 2px solid black; */
+    width: 80%;
+    flex-direction: column;
+    margin: auto;
+  }
+  .mainNav ul li{
+    /* border: 2px solid green; */
+    /* margin:0; */
+  }
+
 }
 
 /* Tablet and Smaller Desktop */

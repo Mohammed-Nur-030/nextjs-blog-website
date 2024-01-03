@@ -36,9 +36,7 @@ export default function Home() {
    
 
         <div className={styles.header}>
-
           <div className={styles.heading}>
-           
             <p>
               Welcome to  <span className='mySpan '>Hunting Coder</span>&nbsp;
             </p>

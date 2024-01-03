@@ -25,7 +25,6 @@ const Contact = () => {
     })
     .then(res=>res.text())
     .then(data=>{ 
-      console.log('Success:',data);
       alert('Thanks for contacting us')
     }
 

@@ -5,9 +5,9 @@ export default  async function handler(req, res) {
   
   
         let data= await fs.promises.readdir("blogData");
-        console.log("req.query.count",req.query.count);
+        // console.log("req.query.count",req.query.count);
          data=data.slice(0,parseInt(req.query.count));
-        console.log("data",data);
+        // console.log("data",data);
             // console.log("data",data);
             let myFile;
             let allBlogs=[];

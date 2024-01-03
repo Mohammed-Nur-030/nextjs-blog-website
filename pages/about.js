@@ -4,10 +4,10 @@ import styles from '@/styles/about.module.css';
 const about = () => {
   return (
     <div className={`${styles.about}`}>
-     <h1>
+     <h1 >
       About Hunting Coder
      </h1>
-     <h2>
+     <h2 >
       Get to know more about Hunting Coder
      </h2>
      <p>

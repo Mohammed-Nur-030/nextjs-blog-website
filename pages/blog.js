@@ -20,7 +20,7 @@ const Blog = (props) => {
   //   //   })
   // }, [])
   const more = async () => {
-    console.log("Inside fetch function");
+    // console.log("Inside fetch function");
   
     try {
       let d = await fetch(`http://localhost:3000/api/blogs/?count=${count + 2}`);
@@ -28,7 +28,6 @@ const Blog = (props) => {
         throw new Error(`HTTP error! Status: ${d.status}`);
       }
       let data = await d.json();
-      console.log("Fetched Data:", data);
       setCount(count + 2);
       setBlogs((prevBlogs) => [...prevBlogs, ...data]);
     } catch (error) {
@@ -41,9 +40,7 @@ const Blog = (props) => {
 
   return (
     <div className={`${styles.main}`}>
-   {console.log("Rendering InfiniteScroll")}
-   {console.log(blogs.length)}
-   {console.log(props.allCount)}
+ 
       <InfiniteScroll
         dataLength={blogs.length}
         next={more}
@@ -60,7 +57,7 @@ const Blog = (props) => {
          blogs.map((item, index) => {
           // console.log("item ",item)
           return (
-            <div key={item.index}>
+            <div key={item.index} className={`${styles.box}`}>
               <Link href={`/blogpost/${item.slug}`}>
                 <div className={`${styles.blogItem}`}>
                   <h3>{item.title}</h3>
