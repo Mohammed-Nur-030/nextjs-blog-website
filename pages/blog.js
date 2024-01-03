@@ -23,7 +23,7 @@ const Blog = (props) => {
     // console.log("Inside fetch function");
   
     try {
-      let d = await fetch(`http://localhost:3000/api/blogs/?count=${count + 2}`);
+      let d = await fetch(`https://nextjs-blog-website-ioa6.vercel.app/api/blogs/?count=${count + 2}`);
       if (!d.ok) {
         throw new Error(`HTTP error! Status: ${d.status}`);
       }
