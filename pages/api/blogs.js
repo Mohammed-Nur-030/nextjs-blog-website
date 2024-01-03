@@ -3,8 +3,11 @@ const fs = require('node:fs');
 
 export default  async function handler(req, res) {
   
-    try{
+  
         let data= await fs.promises.readdir("blogData");
+        console.log("req.query.count",req.query.count);
+         data=data.slice(0,parseInt(req.query.count));
+        console.log("data",data);
             // console.log("data",data);
             let myFile;
             let allBlogs=[];
@@ -17,13 +20,6 @@ export default  async function handler(req, res) {
 
             }
             res.status(200).json(allBlogs);
-           
-     
-
         
-        
-    }catch(err){
-        res.status(400).json({"Error":err});
-    }
   
 }
