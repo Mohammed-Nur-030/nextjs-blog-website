@@ -1,31 +1,52 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  font-size: larger;
   padding: 6rem;
   min-height: 100vh;
+  
 }
 
+.heading {
+  display: inherit;
+  justify-content: inherit;
+  flex-direction: column;
+  align-items: inherit;
+  font-size: 2.0rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .description {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
+  margin-top: 12px;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
 
-.description a {
+
+.heading a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.description p {
+.heading p {
   position: relative;
   margin: 0;
   padding: 1rem;
@@ -155,23 +176,23 @@
     height: 300px;
   }
 
-  .description {
+  .heading {
     font-size: 0.8rem;
   }
 
-  .description a {
+  .heading a {
     padding: 1rem;
   }
 
-  .description p,
-  .description div {
+  .heading p,
+  .heading div {
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
   }
 
-  .description p {
+  .heading p {
     align-items: center;
     inset: 0 0 auto;
     padding: 2rem 1rem 1.4rem;
@@ -187,7 +208,7 @@
     backdrop-filter: blur(24px);
   }
 
-  .description div {
+  .heading div {
     align-items: flex-end;
     pointer-events: none;
     inset: auto 0 0;
@@ -226,4 +247,62 @@
   to {
     transform: rotate(0deg);
   }
+}
+.imgWrap{
+  margin-top: 12px;
+}
+.HomeImg{
+  border-radius: 10px;
+}
+
+.mainNav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-family: var(--font-mono);
+}
+.mainNav ul li{
+ margin: 0 24px;
+ list-style: none;
+ font-weight: bold;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.blogs {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+margin-top: 4rem;
+  font-size: 1.0rem;
+
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+.blogItem{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* font-size: 1.0rem; */
+    margin-top: 3rem;
+    max-width: 70%;
+    width: 100%;
+    z-index: 2;
+    font-family: var(--font-mono);
+  
+}
+.blogItem p{
+
+  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
